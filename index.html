@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FFFFFF">
+<title>D2C — Discípulos de Cristo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<div id="app">
+
+  <header>
+    <div class="hdr-brand">
+      <div class="hdr-logo">D2C <span class="sep">·</span> Discípulos de Cristo</div>
+      <div class="hdr-sub">1 Pedro 2:9</div>
+    </div>
+    <button class="avatar-btn" aria-label="Ver perfil" id="avatar-btn">
+      JR<span class="notif-pip" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <main id="main">
+
+    <!-- ═══════════════ HOME ═══════════════ -->
+    <section id="page-home" class="page active" aria-label="Inicio">
+
+      <div class="hero-verse">
+        <div class="hv-eyebrow">Versículo de la semana</div>
+        <div class="hv-text">"Mas vosotros sois linaje escogido, real sacerdocio, nación santa, pueblo adquirido por Dios, para que anunciéis las virtudes de aquel que os llamó de las tinieblas a su luz admirable."</div>
+        <div class="hv-ref">— 1 Pedro 2:9 (RVR1960)</div>
+      </div>
+
+      <div class="countdown-card">
+        <div class="cd-top">
+          <div class="cd-meta">
+            <span class="cd-icon" aria-hidden="true">🏕️</span>
+            <div>
+              <div class="cd-name">Campamento de Jóvenes 2026</div>
+              <div class="cd-date">Jun 22–26 · Cachuma Lake, CA</div>
+            </div>
+          </div>
+          <button class="cd-reg" data-nav="camp" aria-label="Regístrate al campamento">Regístrate</button>
+        </div>
+        <div class="cd-blocks" role="timer" aria-label="Cuenta regresiva al campamento">
+          <div class="cd-unit"><span class="cd-num" id="cd-d">--</span><span class="cd-lbl">Días</span></div>
+          <div class="cd-unit"><span class="cd-num" id="cd-h">--</span><span class="cd-lbl">Horas</span></div>
+          <div class="cd-unit"><span class="cd-num" id="cd-m">--</span><span class="cd-lbl">Min</span></div>
+          <div class="cd-unit"><span class="cd-num" id="cd-s">--</span><span class="cd-lbl">Seg</span></div>
+        </div>
+      </div>
+
+      <div class="sec-row"><span class="sec-h">Acceso rápido</span></div>
+      <div class="qa-grid">
+        <button class="qa" data-nav="notes"  aria-label="Notas del sermón"><div class="qa-ico" style="background:#EEF2FF;" aria-hidden="true">📝</div><span class="qa-lbl">Notas</span></button>
+        <button class="qa" data-nav="prayer" aria-label="Oración"><div class="qa-ico" style="background:var(--teal-tint);" aria-hidden="true">🙏</div><span class="qa-lbl">Oración</span></button>
+        <button class="qa" data-nav="camp"   aria-label="Campamento"><div class="qa-ico" style="background:var(--gold-tint);" aria-hidden="true">🏕️</div><span class="qa-lbl">Campamento</span></button>
+        <button class="qa" data-nav="games"  aria-label="Versículos"><div class="qa-ico" style="background:#F3F0FF;" aria-hidden="true">🎮</div><span class="qa-lbl">Versículos</span></button>
+      </div>
+
+      <div class="sec-row"><span class="sec-h">Esta semana</span></div>
+      <div class="week-card">
+        <div class="week-card-inner">
+          <div class="week-card-date">
+            <span aria-hidden="true">📅</span>
+            <span class="week-card-date-label">Sábado 6 de junio, 2026</span>
+          </div>
+          <div class="week-card-items">
+            <div class="week-card-item"><div class="week-dot teal"></div><span class="week-item-text">Reunión de Jóvenes · 6:00 PM</span></div>
+            <div class="week-card-item"><div class="week-dot teal"></div><span class="week-item-text">La Liga #5 &amp; La Red #4</span></div>
+            <div class="week-card-item"><div class="week-dot gold"></div><span class="week-item-text">Sermón: <em>CASI</em> · Lucas 9:62</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-row">
+        <span class="sec-h">Serie actual</span>
+        <button class="sec-link" data-nav="notes">Ver notas →</button>
+      </div>
+      <div class="series-card" data-nav="notes" role="button" tabindex="0" aria-label="Serie actual: Casi">
+        <div class="sc-hero">
+          <div class="sc-eyebrow">Sermón 3 · Discípulos de Cristo</div>
+          <div class="sc-title">Casi</div>
+        </div>
+        <div class="sc-foot">
+          <div class="sc-speaker">Pastor Ronnie Reynoso</div>
+          <div class="sc-pill">Lucas 9:62</div>
+        </div>
+      </div>
+
+      <div class="liga-card" data-nav="standings" role="button" tabindex="0" aria-label="Ver tabla de posiciones">
+        <div class="liga-card-header">
+          <div class="liga-card-title-group">
+            <span class="liga-card-eyebrow">D2C Liga 2026</span>
+            <span class="liga-card-title">⚽ La Liga &amp; 🏐 La Red</span>
+          </div>
+          <span class="liga-card-link">Ver tabla →</span>
+        </div>
+        <div class="liga-card-body">
+          <div class="liga-half">
+            <div class="liga-half-label">La Liga — Líderes</div>
+            <div class="liga-half-row"><div class="liga-team-dot" style="background:#1565C0;"></div><span class="liga-team-name">Blue</span><span class="liga-team-pts">9 pts</span></div>
+            <div class="liga-half-row"><div class="liga-team-dot" style="background:#E65100;"></div><span class="liga-team-name">Orange</span><span class="liga-team-pts">9 pts</span></div>
+          </div>
+          <div class="liga-half">
+            <div class="liga-half-label">La Red — Líderes</div>
+            <div class="liga-half-row"><div class="liga-team-dot" style="background:#212121;"></div><span class="liga-team-name">Black</span><span class="liga-team-pts">9 pts</span></div>
+            <div class="liga-half-row"><div class="liga-team-dot" style="background:#C0392B;"></div><span class="liga-team-name">Scarlet</span><span class="liga-team-pts">6 pts</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-row">
+        <span class="sec-h">Próximos eventos</span>
+        <button class="sec-link" data-tab="calendar">Ver todos →</button>
+      </div>
+
+      <div class="month-banner">
+        <div class="mb-header">
+          <span class="mb-series-tag" style="color:var(--gold);">Junio · Serie del Mes</span>
+          <span class="mb-ref">Lucas 9:62</span>
+        </div>
+        <div class="mb-title">Discípulos de Cristo</div>
+        <div class="mb-verse">"Ninguno que poniendo su mano en el arado mira hacia atrás, es apto para el reino de Dios."</div>
+      </div>
+
+      <div class="event-stack">
+        <div class="ev-card" data-tab="calendar">
+          <div class="ev-accent c-sport"></div>
+          <div class="ev-date"><span class="ev-mo">Jun</span><span class="ev-dy">6</span></div>
+          <div class="ev-info"><div class="ev-title">Liga #5 &amp; La Red #4</div><div class="ev-sub">Sábado · Reunión de Jóvenes · 6:00 PM</div></div>
+          <div class="ev-badge b-sport">Liga</div>
+        </div>
+        <div class="ev-card" data-tab="calendar">
+          <div class="ev-accent c-sport"></div>
+          <div class="ev-date"><span class="ev-mo">Jun</span><span class="ev-dy">13</span></div>
+          <div class="ev-info"><div class="ev-title">Liga #6 &amp; La Red #5</div><div class="ev-sub">Sábado · Reunión de Jóvenes</div></div>
+          <div class="ev-badge b-sport">Liga</div>
+        </div>
+        <div class="ev-card dimmed" aria-hidden="true">
+          <div class="ev-accent c-off"></div>
+          <div class="ev-date"><span class="ev-mo">Jun</span><span class="ev-dy">20</span></div>
+          <div class="ev-info"><div class="ev-title">Sin Reunión Juvenil</div><div class="ev-sub">Preparación para el Campamento</div></div>
+          <div class="ev-badge b-off">Descanso</div>
+        </div>
+        <div class="ev-card" data-nav="camp">
+          <div class="ev-accent c-camp"></div>
+          <div class="ev-date"><span class="ev-mo">Jun</span><span class="ev-dy">22</span></div>
+          <div class="ev-info"><div class="ev-title">Campamento de Jóvenes 2026</div><div class="ev-sub">Jun 22–26 · Cachuma Lake, CA</div></div>
+          <div class="ev-badge b-camp">Campa.</div>
+        </div>
+        <div class="ev-card dimmed" aria-hidden="true">
+          <div class="ev-accent c-off"></div>
+          <div class="ev-date"><span class="ev-mo">Jun</span><span class="ev-dy">27</span></div>
+          <div class="ev-info"><div class="ev-title">Sin Reunión Juvenil</div><div class="ev-sub">Regreso del Campamento</div></div>
+          <div class="ev-badge b-off">Descanso</div>
+        </div>
+      </div>
+
+      <div class="see-more-row" data-tab="calendar" style="margin-top:8px;">
+        <span class="see-more-lbl">Ver julio y agosto — incluye campeonatos 🏆</span>
+        <span class="see-more-arrow">›</span>
+      </div>
+
+      <div class="sec-row">
+        <span class="sec-h">Muro de oración</span>
+        <button class="sec-link" data-nav="prayer">Orar →</button>
+      </div>
+      <div class="prayer-stack">
+        <div class="pr-submit" data-nav="prayer" role="button" tabindex="0" aria-label="Pide oración">
+          <div class="pr-submit-ico" aria-hidden="true">✏️</div>
+          <div><div class="pr-submit-lbl">Pide oración</div><div class="pr-submit-sub">Puede ser anónimo</div></div>
+        </div>
+        <div class="pr-card" data-nav="prayer">
+          <div class="pr-ava" aria-hidden="true">🙏</div>
+          <div><div class="pr-name">Anónimo</div><div class="pr-text">"Que Dios me ayude con mis exámenes y con mi familia esta semana."</div></div>
+        </div>
+        <div class="pr-card" data-nav="prayer">
+          <div class="pr-ava" aria-hidden="true">✝️</div>
+          <div><div class="pr-name">Karla M.</div><div class="pr-text">"Pido oración por mi abuela. Está en el hospital y la familia necesita fe."</div></div>
+        </div>
+      </div>
+
+      <div class="sec-row">
+        <span class="sec-h">Avisos</span>
+        <button class="sec-link" data-tab="calendar">Ver más →</button>
+      </div>
+      <div class="annc-stack">
+        <div class="annc-card" data-nav="camp">
+          <div class="annc-top"><div class="annc-dot urgent" aria-hidden="true"></div><span class="annc-tag urgent">Urgente · Registro</span></div>
+          <div class="annc-div"></div>
+          <div class="annc-body"><div class="annc-title">Registro abierto — Campamento 2026</div><div class="annc-text">El registro está abierto. El cupo es limitado. Habla con tu líder para apartar tu lugar.</div></div>
+        </div>
+        <div class="annc-card" data-nav="standings">
+          <div class="annc-top"><div class="annc-dot info" aria-hidden="true"></div><span class="annc-tag info">La Red &amp; La Liga · Este sábado</span></div>
+          <div class="annc-div"></div>
+          <div class="annc-body"><div class="annc-title">No olviden traer su uniforme 👕</div><div class="annc-text">Este sábado hay juegos de La Red y La Liga. Recuerden traer su jersey de equipo.</div></div>
+        </div>
+      </div>
+
+      <div class="tagline-card">
+        <div class="brand">D2C — Discípulos de Cristo</div>
+        <div class="lines">Mejores decisiones hoy.<br>Menos arrepentimientos mañana.<br>Marcando este mundo con la luz de Cristo.</div>
+        <div class="ref">1 Pedro 2:9</div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════ NOTES ═══════════════ -->
+    <section id="page-notes" class="page" aria-label="Notas del sermón">
+    <div class="notes-page">
+
+      <div class="notes-hero">
+        <div class="notes-hero-eyebrow">Serie · 2026</div>
+        <div class="notes-hero-series">Discípulos de Cristo</div>
+        <div class="notes-hero-theme">De las Tinieblas a Su Luz Admirable</div>
+        <div class="notes-hero-verse">"Mas vosotros sois linaje escogido, real sacerdocio, nación santa, pueblo adquirido por Dios, para que anunciéis las virtudes de aquel que os llamó de las tinieblas a su luz admirable."</div>
+        <div class="notes-hero-ref">— 1 Pedro 2:9 (RVR1960)</div>
+      </div>
+
+      <div class="sec-row">
+        <span class="sec-h">Progreso de la serie</span>
+        <span style="font-size:12px;color:var(--ink-3);">Semana 3 de 6</span>
+      </div>
+      <div class="series-tracker">
+        <div class="series-step done">
+          <div class="step-dot">1</div>
+          <span class="step-lbl">Discípulos<br>de Cristo</span>
+        </div>
+        <div class="series-step done">
+          <div class="step-dot">2</div>
+          <span class="step-lbl">Hecho<br>para Más</span>
+        </div>
+        <div class="series-step current">
+          <div class="step-dot">3</div>
+          <span class="step-lbl">Casi</span>
+        </div>
+        <div class="series-step">
+          <div class="step-dot" style="font-size:8px;">4+</div>
+          <span class="step-lbl">Próximos<br>sermones</span>
+        </div>
+      </div>
+
+      <div class="key-verse-block" style="margin-top:16px;">
+        <div class="key-verse-label">Pasaje Principal de la Serie</div>
+        <div class="key-verse-text">"Mas vosotros sois linaje escogido, real sacerdocio, nación santa, pueblo adquirido por Dios, para que anunciéis las virtudes de aquel que os llamó de las tinieblas a su luz admirable."</div>
+        <div class="key-verse-ref">— 1 Pedro 2:9 (RVR1960)</div>
+      </div>
+
+      <div class="sec-row"><span class="sec-h">Notas del Sermón</span></div>
+
+      <!-- SERMÓN 1 -->
+      <div class="sermon-card" id="sermon-1">
+        <div class="sermon-header" data-toggle="sermon-1">
+          <div class="sermon-header-left">
+            <div class="sermon-num-label">Sermón 1</div>
+            <div class="sermon-title">Discípulos de Cristo</div>
+            <div class="sermon-subtitle">De las Tinieblas a Su Luz Admirable</div>
+            <div class="sermon-badge-row">
+              <span class="sermon-passage-badge">1 Pedro 2:9</span>
+              <span style="font-size:11px;color:var(--ink-3);">Pastor Ronnie Reynoso</span>
+            </div>
+          </div>
+          <span class="sermon-expand-icon">›</span>
+        </div>
+        <div class="sermon-body">
+          <div class="sermon-intro">
+            <div class="sermon-intro-label">Introducción</div>
+            <div class="sermon-intro-text">
+              <p>¿Alguna vez te has preguntado si realmente importas?</p>
+              <p>Vivimos en un mundo donde constantemente nos dicen quiénes somos. Las redes sociales. Los comentarios de la gente. Los likes. Las críticas.</p>
+              <p>Y muchos jóvenes crecen creyendo que su valor depende de cuántos los siguen, cuántos los aprueban, o cuánto tienen.</p>
+              <p><em>Pero ¿qué pasa cuando todo eso desaparece?</em></p>
+              <p>La Biblia dice algo completamente diferente sobre quién eres. Y esta noche vamos a verlo juntos.</p>
+            </div>
+          </div>
+          <div class="sermon-divider"></div>
+          <div class="sermon-card-quote">
+            <div class="sermon-card-quote-text">"Fuimos llamados de las tinieblas… para reflejar Su luz."</div>
+          </div>
+          <div class="sermon-points">
+            <div class="sermon-points-label">3 Puntos Principales</div>
+            <div class="sermon-point">
+              <div class="sermon-point-head"><div class="point-num">1</div><span class="point-title">ESCOGIDOS</span></div>
+              <div class="sermon-point-subs">
+                <div class="point-sub"><span>Dios nos escogió y nos llamó a Él mismo</span></div>
+                <div class="point-sub"><span>Tu identidad se encuentra en Cristo, no en la opinión de los demás</span></div>
+                <div class="point-sub"><span>Efesios 1:4 — "Según nos escogió en él antes de la fundación del mundo"</span></div>
+              </div>
+            </div>
+            <div class="sermon-point">
+              <div class="sermon-point-head"><div class="point-num">2</div><span class="point-title">COMPRADOS</span></div>
+              <div class="sermon-point-subs">
+                <div class="point-sub"><span>Pertenecemos a Cristo porque Él pagó el precio</span></div>
+                <div class="point-sub"><span>1 Corintios 6:20 — "Fuisteis comprados por precio"</span></div>
+                <div class="point-sub"><span>Cuando entiendes que perteneces a Dios, cambias cómo vives</span></div>
+              </div>
+            </div>
+            <div class="sermon-point">
+              <div class="sermon-point-head"><div class="point-num">3</div><span class="point-title">ENVIADOS</span></div>
+              <div class="sermon-point-subs">
+                <div class="point-sub"><span>Fuimos llamados a reflejar a Cristo públicamente</span></div>
+                <div class="point-sub"><span>Mateo 5:14 — "Vosotros sois la luz del mundo"</span></div>
+                <div class="point-sub"><span>Un discípulo no solamente recibe luz — también la refleja</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="sermon-conclusion">
+            <div class="sermon-conclusion-label">Conclusión</div>
+            <div class="sermon-conclusion-text">
+              <p>No eres un accidente. No eres un número. No eres lo que dicen de ti.</p>
+              <p>Fuiste escogido. Fuiste comprado. Y fuiste enviado con propósito.</p>
+              <p>Dios no te salvó para que te quedes quieto. Te salvó para que reflejes Su luz en el lugar donde Él te puso.</p>
+            </div>
+          </div>
+          <div class="sermon-steps">
+            <div class="sermon-steps-label">Próximos Pasos</div>
+            <div class="sermon-step"><div class="sermon-step-check">✓</div><span class="sermon-step-text">Encuentro mi identidad en Cristo</span></div>
+            <div class="sermon-step"><div class="sermon-step-check">✓</div><span class="sermon-step-text">Decido vivir como alguien que pertenece a Dios</span></div>
+            <div class="sermon-step"><div class="sermon-step-check">✓</div><span class="sermon-step-text">Uso mi vida para reflejar la luz de Cristo</span></div>
+          </div>
+          <div class="sermon-takeaway">
+            <div class="sermon-takeaway-text">"Dios no te salvó para quedarte quieto."</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERMÓN 2 -->
+      <div class="sermon-card" id="sermon-2">
+        <div class="sermon-header" data-toggle="sermon-2">
+          <div class="sermon-header-left">
+            <div class="sermon-num-label">Sermón 2</div>
+            <div class="sermon-title">Fuiste Hecho para Más</div>
+            <div class="sermon-subtitle">Llamados a Vivir en Su Luz</div>
+            <div class="sermon-badge-row">
+              <span class="sermon-passage-badge">1 Pedro 2:9</span>
+              <span class="sermon-passage-badge" style="background:#F3F0FF;color:#7C3AED;border-color:rgba(124,58,237,.2);">Efesios 2:10</span>
+              <span style="font-size:11px;color:var(--ink-3);">Pastor Ronnie Reynoso</span>
+            </div>
+          </div>
+          <span class="sermon-expand-icon">›</span>
+        </div>
+        <div class="sermon-body">
+          <div class="sermon-intro">
+            <div class="sermon-intro-label">Introducción</div>
+            <div class="sermon-intro-text">
+              <p>Piensa en alguien que tiene todo. Buenas calificaciones. Popularidad. Familia estable. Todo lo que el mundo diría que necesitas para ser feliz.</p>
+              <p>Y aun así… algo no cuadra. Hay un vacío que no saben cómo llenar.</p>
+              <p>Porque vivir bien no es lo mismo que vivir con propósito.</p>
+              <p><em>Dios no te creó solamente para existir. Te creó para más.</em></p>
+            </div>
+          </div>
+          <div class="sermon-divider"></div>
+          <div class="sermon-card-quote">
+            <div class="sermon-card-quote-text">"No fuimos llamados a encajar. Fuimos llamados a reflejar Su luz."</div>
+          </div>
+          <div class="sermon-points">
+            <div class="sermon-points-label">3 Puntos Principales</div>
+            <div class="sermon-point">
+              <div class="sermon-point-head"><div class="point-num">1</div><span class="point-title">MÁS QUE EXISTIR</span></div>
+              <div class="sermon-point-subs">
+                <div class="point-sub"><span>Los creyentes fueron creados con propósito divino</span></div>
+                <div class="point-sub"><span>Deja de vivir espiritualmente en piloto automático</span></div>
+                <div class="point-sub"><span>Efesios 2:10 — "Somos hechura suya, creados en Cristo Jesús para buenas obras"</span></div>
+              </div>
+            </div>
+            <div class="sermon-point">
+              <div class="sermon-point-head"><div class="point-num">2</div><span class="point-title">MÁS QUE ENCAJAR</span></div>
+              <div class="sermon-point-subs">
+                <div class="point-sub"><span>Los creyentes no fueron llamados a encajar en el mundo</span></div>
+                <div class="point-sub"><span>No bajes tus convicciones para recibir aceptación temporal</span></div>
+                <div class="point-sub"><span>Romanos 12:2 — "No os conforméis a este mundo"</span></div>
+              </div>
+            </div>
+            <div class="sermon-point">
+              <div class="sermon-point-head"><div class="point-num">3</div><span class="point-title">MÁS QUE ÉXITO</span></div>
+              <div class="sermon-point-subs">
+                <div class="point-sub"><span>El éxito sin propósito nunca satisface el alma</span></div>
+                <div class="point-sub"><span>Marcos 8:36 — "¿De qué le sirve al hombre ganar el mundo entero y perder su alma?"</span></div>
+                <div class="point-sub"><span>Vive para algo eterno, no solo para algo exitoso</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="sermon-conclusion">
+            <div class="sermon-conclusion-label">Conclusión</div>
+            <div class="sermon-conclusion-text">
+              <p>El mundo te va a decir que el éxito es tener más, ser más, aparentar más.</p>
+              <p>Pero Dios te dice algo diferente: <em>fuiste creado para impactar, no para impresionar.</em></p>
+              <p>Hay personas en tu escuela, en tu familia, en tu vecindario que necesitan ver a alguien que vive diferente. Ese alguien puedes ser tú.</p>
+            </div>
+          </div>
+          <div class="sermon-steps">
+            <div class="sermon-steps-label">Próximos Pasos</div>
+            <div class="sermon-step"><div class="sermon-step-check">✓</div><span class="sermon-step-text">Dejo de vivir distraído espiritualmente</span></div>
+            <div class="sermon-step"><div class="sermon-step-check">✓</div><span class="sermon-step-text">Decido vivir diferente aunque otros no lo hagan</span></div>
+            <div class="sermon-step"><div class="sermon-step-check">✓</div><span class="sermon-step-text">Uso mi vida para algo eterno</span></div>
+          </div>
+          <div class="sermon-takeaway">
+            <div class="sermon-takeaway-text">"Dios no te creó solamente para existir. Fuiste hecho para más."</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERMÓN 3 — CURRENT -->
+      <div class="sermon-card open" id="sermon-3">
+        <div class="sermon-header" data-toggle="sermon-3">
+          <div class="sermon-header-left">
+            <div class="sermon-num-label">Sermón 3 <span class="sermon-current-pill">Esta semana</span></div>
+            <div class="sermon-title">Casi</div>
+            <div class="sermon-subtitle">Lo Que Toma Seguir Verdaderamente a Cristo</div>
+            <div class="sermon-badge-row">
+              <span class="sermon-passage-badge">Lucas 9:62</span>
+              <span style="font-size:11px;color:var(--ink-3);">Pastor Ronnie Reynoso</span>
+            </div>
+          </div>
+          <span class="sermon-expand-icon">›</span>
+        </div>
+        <div class="sermon-body">
+          <div class="sermon-intro">
+            <div class="sermon-intro-label">Introducción</div>
+            <div class="sermon-intro-text">
+              <p>Piensa en alguien que llegó al campamento la primera noche completamente emocionado.</p>
+              <p>"¡Este campamento me va a cambiar la vida!"</p>
+              <p>Pero al segundo día… ya tenía calor, ya no quería caminar, ya extrañaba su cama.</p>
+              <p><em>Empezar algo emociona. Permanecer requiere compromiso.</em></p>
+              <p>Y honestamente, muchos jóvenes siguen a Cristo de la misma manera. Se emocionan en el campamento. Se emocionan en el retiro. Se emocionan con la predicación.</p>
+              <p>Pero cuando vuelven a casa… todo sigue igual.</p>
+              <p>Lucas 9:62 nos da una de las frases más directas que Jesús ever dijo sobre el discipulado. Y esta noche vamos a enfrentarla juntos.</p>
+            </div>
+          </div>
+          <div class="sermon-divider"></div>
+          <div class="sermon-card-quote">
+            <div class="sermon-card-quote-text">"Empezar algo emociona… pero permanecer requiere compromiso."</div>
+          </div>
+          <div class="sermon-points">
+            <div class="sermon-points-label">3 Puntos Principales</div>
+            <div class="sermon-point">
+              <div class="sermon-point-head"><div class="point-num">1</div><span class="point-title">PERMANECER</span></div>
+              <div class="sermon-point-subs">
+                <div class="point-sub"><span>El discipulado no es emoción temporal — es constancia y fidelidad</span></div>
+                <div class="point-sub"><span>Lo que más importa es la fidelidad después de los momentos emocionales</span></div>
+                <div class="point-sub"><span>Gálatas 6:9 — "No nos cansemos de hacer el bien"</span></div>
+              </div>
+            </div>
+            <div class="sermon-point">
+              <div class="sermon-point-head"><div class="point-num">2</div><span class="point-title">PRIORIDAD</span></div>
+              <div class="sermon-point-subs">
+                <div class="point-sub"><span>Lo que amas se refleja en lo que priorizas</span></div>
+                <div class="point-sub"><span>Lo que ocupa el corazón eventualmente ocupa toda la vida</span></div>
+                <div class="point-sub"><span>Mateo 6:33 — "Buscad primeramente el reino de Dios"</span></div>
+              </div>
+            </div>
+            <div class="sermon-point">
+              <div class="sermon-point-head"><div class="point-num">3</div><span class="point-title">PLENITUD</span></div>
+              <div class="sermon-point-subs">
+                <div class="point-sub"><span>Cristo vino para dar vida en abundancia — no compromiso a medias</span></div>
+                <div class="point-sub"><span>Juan 10:10 — "Yo he venido para que tengan vida, y vida en abundancia"</span></div>
+                <div class="point-sub"><span>Dios no busca perfección. Busca entrega.</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="sermon-conclusion">
+            <div class="sermon-conclusion-label">Conclusión</div>
+            <div class="sermon-conclusion-text">
+              <p>Jesús nunca llama a alguien para arruinarle la vida. Lo llama para darle la vida que realmente estaba buscando.</p>
+              <p>El problema no es que Cristo pida demasiado. El problema es que nosotros le ofrecemos muy poco.</p>
+              <p><em>Hoy la pregunta es: ¿vas a seguirlo de verdad, o vas a seguir viviendo "casi" comprometido?</em></p>
+            </div>
+          </div>
+          <div class="sermon-steps">
+            <div class="sermon-steps-label">Próximos Pasos</div>
+            <div class="sermon-step"><div class="sermon-step-check">✓</div><span class="sermon-step-text">Decido permanecer aun cuando seguir a Cristo cueste</span></div>
+            <div class="sermon-step"><div class="sermon-step-check">✓</div><span class="sermon-step-text">Pongo a Dios primero sobre mis comodidades</span></div>
+            <div class="sermon-step"><div class="sermon-step-check">✓</div><span class="sermon-step-text">Dejo de vivir "casi" comprometido</span></div>
+          </div>
+          <div class="sermon-takeaway">
+            <div class="sermon-takeaway-text">"El discipulado verdadero cuesta… pero siempre vale la pena."</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-row"><span class="sec-h">Frases de la Serie</span></div>
+      <div class="quote-callout">
+        <div class="quote-callout-text">"Dios no está buscando perfección. Está buscando entrega."</div>
+        <div class="quote-callout-src">Sermón 3 · Casi</div>
+      </div>
+      <div class="quote-callout">
+        <div class="quote-callout-text">"Fuiste hecho para más."</div>
+        <div class="quote-callout-src">Sermón 2 · Fuiste Hecho para Más</div>
+      </div>
+      <div class="quote-callout">
+        <div class="quote-callout-text">"Fuimos llamados de las tinieblas… para reflejar Su luz."</div>
+        <div class="quote-callout-src">Sermón 1 · Discípulos de Cristo</div>
+      </div>
+
+    </div>
+    </section>
+
+    <!-- ═══════════════ CALENDAR ═══════════════ -->
+    <section id="page-calendar" class="page" aria-label="Calendario">
+    <div class="cal-page">
+
+      <div class="cal-hero">
+        <div class="cal-hero-eyebrow">D2C · 2026</div>
+        <div class="cal-hero-title">Calendario</div>
+        <div class="cal-hero-sub">Todos los eventos del ministerio</div>
+      </div>
+
+      <div class="cal-featured">
+        <div class="cal-featured-top">
+          <div class="cal-featured-badge">Próximo Evento Especial</div>
+          <div class="cal-featured-title">Campamento Juvenil 2026</div>
+          <div class="cal-featured-meta">
+            <span>📍 Cachuma Lake, CA</span>
+            <span>🗓 Jun 22–26</span>
+          </div>
+        </div>
+        <div class="cal-featured-body">
+          <div class="cal-featured-cd" role="timer" aria-label="Cuenta regresiva al campamento">
+            <div class="cal-feat-unit"><span class="cal-feat-num" id="cal-cd-d">--</span><span class="cal-feat-lbl">Días</span></div>
+            <span class="cal-feat-sep">:</span>
+            <div class="cal-feat-unit"><span class="cal-feat-num" id="cal-cd-h">--</span><span class="cal-feat-lbl">Hrs</span></div>
+            <span class="cal-feat-sep">:</span>
+            <div class="cal-feat-unit"><span class="cal-feat-num" id="cal-cd-m">--</span><span class="cal-feat-lbl">Min</span></div>
+          </div>
+          <button class="cal-reg-btn" data-nav="camp">Ver detalles</button>
+        </div>
+      </div>
+
+      <div class="cal-month">
+        <span class="cal-month-label">Junio 2026</span>
+        <div class="cal-month-line"></div>
+      </div>
+
+      <div class="cal-timeline">
+        <div class="cal-row">
+          <div class="cal-line-col"><div class="cal-dot sport"></div></div>
+          <div class="cal-card" data-nav="standings">
+            <div class="cal-card-head"><span class="cal-card-date">Sábado 6 de junio</span><span class="cal-badge sport">Liga</span></div>
+            <div class="cal-card-title">Reunión de Jóvenes</div>
+            <div class="cal-card-sub">6:00 PM</div>
+            <div class="cal-card-detail">
+              <span class="cal-tag">La Liga #5</span><span class="cal-tag">La Red #4</span>
+              <span class="cal-tag">Serie: CASI · Lucas 9:62</span><span class="cal-tag">👕 Trae tu jersey</span>
+            </div>
+          </div>
+        </div>
+        <div class="cal-row">
+          <div class="cal-line-col"><div class="cal-dot sport"></div></div>
+          <div class="cal-card" data-nav="standings">
+            <div class="cal-card-head"><span class="cal-card-date">Sábado 13 de junio</span><span class="cal-badge sport">Liga</span></div>
+            <div class="cal-card-title">Reunión de Jóvenes</div>
+            <div class="cal-card-sub">6:00 PM</div>
+            <div class="cal-card-detail">
+              <span class="cal-tag">La Liga #6</span><span class="cal-tag">La Red #5</span><span class="cal-tag">👕 Trae tu jersey</span>
+            </div>
+          </div>
+        </div>
+        <div class="cal-row">
+          <div class="cal-line-col"><div class="cal-dot off"></div></div>
+          <div class="cal-card dimmed">
+            <div class="cal-card-head"><span class="cal-card-date">Sábado 20 de junio</span><span class="cal-badge off">Descanso</span></div>
+            <div class="cal-card-title">Sin Reunión Juvenil</div>
+            <div class="cal-card-sub">Preparación para el Campamento</div>
+          </div>
+        </div>
+        <div class="cal-row">
+          <div class="cal-line-col"><div class="cal-dot depart"></div></div>
+          <div class="cal-card" data-nav="camp">
+            <div class="cal-card-head"><span class="cal-card-date">Domingo 21 de junio</span><span class="cal-badge depart">Campa.</span></div>
+            <div class="cal-card-title">Entrega de Maletas y Equipo</div>
+            <div class="cal-card-sub">Traer a la iglesia antes de la salida</div>
+            <div class="cal-card-detail">
+              <span class="cal-tag">Maletas</span><span class="cal-tag">Tiendas</span><span class="cal-tag">Sillas</span><span class="cal-tag">Sleeping bag</span>
+            </div>
+          </div>
+        </div>
+        <div class="cal-row">
+          <div class="cal-line-col"><div class="cal-dot camp"></div></div>
+          <div class="cal-card" data-nav="camp">
+            <div class="cal-card-head"><span class="cal-card-date">Lunes 22 de junio</span><span class="cal-badge camp">Salida</span></div>
+            <div class="cal-card-title">Salida al Campamento</div>
+            <div class="cal-card-sub">6:00 AM · Llegar a la iglesia. Solo backpack.</div>
+          </div>
+        </div>
+        <div class="cal-row">
+          <div class="cal-line-col"><div class="cal-dot camp"></div></div>
+          <div class="cal-card" data-nav="camp">
+            <div class="cal-card-head"><span class="cal-card-date">Jun 22–26</span><span class="cal-badge camp">Campa.</span></div>
+            <div class="cal-card-title">Campamento Juvenil 2026</div>
+            <div class="cal-card-sub">Cachuma Lake, CA</div>
+          </div>
+        </div>
+        <div class="cal-row">
+          <div class="cal-line-col"><div class="cal-dot depart"></div></div>
+          <div class="cal-card" data-nav="camp">
+            <div class="cal-card-head"><span class="cal-card-date">Viernes 26 de junio</span><span class="cal-badge depart">Regreso</span></div>
+            <div class="cal-card-title">Regreso del Campamento</div>
+            <div class="cal-card-sub">6:00 PM · Iglesia</div>
+          </div>
+        </div>
+        <div class="cal-row">
+          <div class="cal-line-col"><div class="cal-dot off"></div></div>
+          <div class="cal-card dimmed">
+            <div class="cal-card-head"><span class="cal-card-date">Sábado 27 de junio</span><span class="cal-badge off">Descanso</span></div>
+            <div class="cal-card-title">Sin Reunión Juvenil</div>
+            <div class="cal-card-sub">Regreso del Campamento</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cal-month">
+        <span class="cal-month-label">Julio 2026</span>
+        <div class="cal-month-line"></div>
+      </div>
+
+      <div class="cal-timeline">
+        <div class="cal-row">
+          <div class="cal-line-col"><div class="cal-dot champ"></div></div>
+          <div class="cal-card" data-nav="standings">
+            <div class="cal-card-head"><span class="cal-card-date">Sábado 11 de julio</span><span class="cal-badge champ">Campeonato</span></div>
+            <div class="cal-card-title">Campeonato — La Liga ⚽</div>
+            <div class="cal-card-sub">Reunión de Jóvenes · Final de temporada</div>
+          </div>
+        </div>
+        <div class="cal-row">
+          <div class="cal-line-col"><div class="cal-dot champ"></div></div>
+          <div class="cal-card" data-nav="standings">
+            <div class="cal-card-head"><span class="cal-card-date">Sábado 18 de julio</span><span class="cal-badge champ">Campeonato</span></div>
+            <div class="cal-card-title">Campeonato — La Red 🏐</div>
+            <div class="cal-card-sub">Reunión de Jóvenes · Final de temporada</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </section>
+
+    <!-- ═══════════════ BIBLE ═══════════════ -->
+    <section id="page-bible" class="page" aria-label="Biblia">
+      <div class="ph-page"><div class="ph-ico">📖</div><div class="ph-title">Planes Bíblicos</div><div class="ph-sub">Planes de lectura, tu constancia diaria y devocionales para jóvenes.</div><div class="ph-pill">Próximamente</div></div>
+    </section>
+
+    <!-- ═══════════════ MORE ═══════════════ -->
+    <section id="page-more" class="page" aria-label="Más secciones">
+      <div class="more-hero">
+        <div class="more-hero-name">Hola, Juan 👋</div>
+        <div class="more-hero-sub">¿Listo para crecer espiritualmente hoy?</div>
+      </div>
+      <div class="profile-row" data-nav="profile" role="button" tabindex="0" aria-label="Ver perfil">
+        <div class="prof-ava" aria-hidden="true">JR</div>
+        <div><div class="prof-name">Juan Rivera</div><div class="prof-sub">Discípulo de Cristo · D2C 2026</div></div>
+        <div class="prof-arrow" aria-hidden="true">›</div>
+      </div>
+      <div class="more-group">Ministerio</div>
+      <div class="more-list">
+        <div class="more-row" data-nav="prayer"><div class="more-row-ico" style="background:var(--teal-tint);">🙏</div><div><div class="more-row-title">Muro de Oración</div><div class="more-row-sub">Peticiones · Orar por otros</div></div><div class="more-row-arrow">›</div></div>
+        <div class="more-row" data-nav="games"><div class="more-row-ico" style="background:#F3F0FF;">🎮</div><div><div class="more-row-title">Juegos de Versículos</div><div class="more-row-sub">Quiz · Flashcards · Opción múltiple</div></div><div class="more-row-arrow">›</div></div>
+        <div class="more-row" data-nav="standings"><div class="more-row-ico" style="background:var(--gold-tint);">🏆</div><div><div class="more-row-title">Tabla de Posiciones</div><div class="more-row-sub">La Liga · La Red · Resultados</div></div><div class="more-row-arrow">›</div></div>
+      </div>
+      <div class="more-group">Eventos</div>
+      <div class="more-list">
+        <div class="more-row" data-nav="camp"><div class="more-row-ico" style="background:var(--gold-tint);">🏕️</div><div><div class="more-row-title">Registro de Campamento</div><div class="more-row-sub">Formulario · Lista de maleta · Reglas</div></div><div class="more-row-arrow">›</div></div>
+        <div class="more-row" data-tab="calendar"><div class="more-row-ico" style="background:#EEF2FF;">📅</div><div><div class="more-row-title">Calendario completo</div><div class="more-row-sub">Todos los eventos y actividades</div></div><div class="more-row-arrow">›</div></div>
+      </div>
+      <div class="more-group">Mi cuenta</div>
+      <div class="more-list">
+        <div class="more-row" data-nav="profile"><div class="more-row-ico" style="background:#EEF2FF;">👤</div><div><div class="more-row-title">Mi Perfil</div><div class="more-row-sub">Constancia · Medallas · Metas espirituales</div></div><div class="more-row-arrow">›</div></div>
+      </div>
+      <div class="brand-footer">
+        <div class="brand-footer-name">D2C — Discípulos de Cristo</div>
+        <div class="brand-footer-ref">1 Pedro 2:9</div>
+        <div class="brand-5"><span>⚡ Edificando</span><span>⚡ Entrenando</span><span>⚡ Equipando</span><span>⚡ Evangelizando</span><span>⚡ Enviando</span></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ STANDINGS ═══════════════ -->
+    <section id="page-standings" class="page" aria-label="Tabla de posiciones">
+      <div class="standings-header">
+        <div class="standings-title">D2C Liga 2026</div>
+        <div class="league-toggle" role="tablist">
+          <button class="lt-btn active" id="btn-liga" data-league="liga" role="tab" aria-selected="true">⚽ La Liga</button>
+          <button class="lt-btn"        id="btn-red"  data-league="red"  role="tab" aria-selected="false">🏐 La Red</button>
+        </div>
+        <div class="view-tabs" role="tablist">
+          <button class="vt-btn active" data-view="standings">Posiciones</button>
+          <button class="vt-btn"        data-view="results">Resultados</button>
+          <button class="vt-btn"        data-view="schedule">Próximos</button>
+        </div>
+      </div>
+      <div class="standings-scroll">
+        <div id="panel-liga" role="tabpanel">
+          <div class="lv lv-standings">
+            <div class="panel-lbl">Tabla de Posiciones</div>
+            <div class="table-hdr liga-cols"><div class="th-cell">Equipo</div><div class="th-cell">G</div><div class="th-cell">P</div><div class="th-cell">E</div><div class="th-cell">Pts</div></div>
+            <div style="padding:0 var(--px); display:flex; flex-direction:column; gap:5px;" id="liga-table"></div>
+            <div style="padding:9px var(--px) 2px; font-size:11px; color:var(--ink-3); text-align:center;">G = Ganados · P = Perdidos · E = Empate · Pts: G×3, E×1</div>
+          </div>
+          <div class="lv lv-results" style="display:none;">
+            <div class="panel-lbl">Resultados</div>
+            <div style="padding:0 var(--px); display:flex; flex-direction:column; gap:5px;" id="liga-results"></div>
+          </div>
+          <div class="lv lv-schedule" style="display:none;">
+            <div class="panel-lbl">Próximos Partidos</div>
+            <div style="padding:0 var(--px); display:flex; flex-direction:column; gap:5px;" id="liga-schedule"></div>
+          </div>
+        </div>
+        <div id="panel-red" role="tabpanel" style="display:none;">
+          <div class="lv lv-standings">
+            <div class="panel-lbl">Tabla de Posiciones</div>
+            <div class="table-hdr red-cols"><div class="th-cell">Equipo</div><div class="th-cell">G</div><div class="th-cell">P</div><div class="th-cell">Pts</div></div>
+            <div style="padding:0 var(--px); display:flex; flex-direction:column; gap:5px;" id="red-table"></div>
+            <div style="padding:9px var(--px) 2px; font-size:11px; color:var(--ink-3); text-align:center;">G = Ganados · P = Perdidos · Pts: G×3</div>
+          </div>
+          <div class="lv lv-results" style="display:none;">
+            <div class="panel-lbl">Resultados</div>
+            <div style="padding:0 var(--px); display:flex; flex-direction:column; gap:5px;" id="red-results"></div>
+          </div>
+          <div class="lv lv-schedule" style="display:none;">
+            <div class="panel-lbl">Próximos Partidos</div>
+            <div style="padding:0 var(--px); display:flex; flex-direction:column; gap:5px;" id="red-schedule"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sub-pages -->
+    <section id="page-prayer"  class="page"><div class="ph-page"><div class="ph-ico">🙏</div><div class="ph-title">Muro de Oración</div><div class="ph-sub">Manda tu petición, ora por otros. Puedes hacerlo de forma anónima.</div><div class="ph-pill">Próximamente</div></div></section>
+
+    <!-- ═══════════════ CAMP ═══════════════ -->
+    <section id="page-camp" class="page" aria-label="Campamento Juvenil 2026">
+    <div class="camp-page">
+
+      <div class="camp-hero">
+        <div class="camp-hero-badge">Iglesia Bautista Bíblica de Long Beach</div>
+        <div class="camp-hero-title">Campamento Juvenil 2026</div>
+        <div class="camp-hero-meta">
+          <span>📍 Cachuma Lake, CA</span>
+          <span>🗓 22–26 de junio</span>
+          <span>💵 $150 por persona</span>
+        </div>
+      </div>
+
+      <div class="camp-cd">
+        <div class="camp-cd-top">
+          <span>Cuenta regresiva</span>
+          <span style="color:var(--gold); font-size:11px;">Jun 22 · 6:00 AM</span>
+        </div>
+        <div class="camp-cd-blocks" role="timer">
+          <div class="camp-cd-unit"><span class="camp-cd-num" id="cmp-d">--</span><span class="camp-cd-lbl">Días</span></div>
+          <div class="camp-cd-unit"><span class="camp-cd-num" id="cmp-h">--</span><span class="camp-cd-lbl">Horas</span></div>
+          <div class="camp-cd-unit"><span class="camp-cd-num" id="cmp-m">--</span><span class="camp-cd-lbl">Min</span></div>
+          <div class="camp-cd-unit"><span class="camp-cd-num" id="cmp-s">--</span><span class="camp-cd-lbl">Seg</span></div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:8px; padding:14px var(--px) 0;">
+        <div class="alert-banner">
+          <div class="alert-banner-ico">📋</div>
+          <div class="alert-banner-body">
+            <div class="alert-banner-title">Forma de permiso — límite: 7 de junio</div>
+            <div class="alert-banner-text">Entrega la forma firmada a tu líder antes del 7 de junio.</div>
+          </div>
+        </div>
+        <div class="alert-banner" style="background:var(--teal-tint); border-color:var(--teal);">
+          <div class="alert-banner-ico">🚌</div>
+          <div class="alert-banner-body">
+            <div class="alert-banner-title" style="color:var(--teal);">Solo autobús — no carros propios</div>
+            <div class="alert-banner-text">La transportación será en autobús. No pueden llevar su propio carro.</div>
+          </div>
+        </div>
+        <div class="alert-banner" style="background:rgba(197,57,57,.07); border-color:rgba(197,57,57,.25);">
+          <div class="alert-banner-ico">📵</div>
+          <div class="alert-banner-body">
+            <div class="alert-banner-title" style="color:#C53939;">Celulares entregados al inicio</div>
+            <div class="alert-banner-text">Se regresan al volver. Desconéctate para conectarte con Dios.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:14px var(--px) 0;">
+        <div class="why-card">
+          <div class="why-eyebrow">Más que un viaje</div>
+          <div class="why-title">El campamento cambia vidas.</div>
+          <div class="why-items">
+            <div class="why-item"><div class="why-item-dot"></div><div class="why-item-text"><strong>Para desconectarte.</strong> Dejas el teléfono y el ruido — y te conectas con Dios de verdad.</div></div>
+            <div class="why-item"><div class="why-item-dot"></div><div class="why-item-text"><strong>Para escuchar Su voz.</strong> Hay decisiones que solo se toman en silencio. El campamento crea ese espacio.</div></div>
+            <div class="why-item"><div class="why-item-dot"></div><div class="why-item-text"><strong>Para crecer espiritualmente.</strong> La Palabra, la oración y el compañerismo juntos hacen algo que no pasa en la reunión del sábado.</div></div>
+            <div class="why-item"><div class="why-item-dot"></div><div class="why-item-text"><strong>Para hacer amistades que duran.</strong> Las personas que van al campamento contigo se convierten en tu comunidad.</div></div>
+          </div>
+          <div class="why-verse">"Venid vosotros aparte a un lugar desierto, y reposad un poco."</div>
+          <div class="why-verse-ref">— Marcos 6:31 (RVR1960)</div>
+        </div>
+      </div>
+
+      <div style="padding:14px var(--px) 0; display:flex; flex-direction:column; gap:8px;">
+
+        <div class="camp-section-toggle open" id="cst-info">
+          <div class="cst-header" data-toggle="cst-info">
+            <div class="cst-left"><div class="cst-icon" style="background:var(--gold-tint);">📋</div><div><div class="cst-title">Información</div><div class="cst-subtitle">Contacto · Costo · Sitio web</div></div></div>
+            <span class="cst-arrow">›</span>
+          </div>
+          <div class="cst-body">
+            <div style="padding:12px var(--px);">
+              <div class="contact-card" style="margin:0 0 8px;">
+                <div class="contact-ava">RR</div>
+                <div>
+                  <div class="contact-name">Hno. Ronnie Reynoso</div>
+                  <div class="contact-role">Coordinador del Campamento</div>
+                  <a class="contact-email" href="mailto:rreynoso@ibblb.org">rreynoso@ibblb.org</a>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="info-row"><div class="info-row-ico">🌐</div><div class="info-row-body"><div class="info-row-label">Sitio web</div><div class="info-row-val">ibblb.org/campamento-jovenes</div></div></div>
+                <div class="info-row"><div class="info-row-ico">💵</div><div class="info-row-body"><div class="info-row-label">Costo total</div><div class="info-row-val">$150 por persona</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="camp-section-toggle" id="cst-pagos">
+          <div class="cst-header" data-toggle="cst-pagos">
+            <div class="cst-left"><div class="cst-icon" style="background:var(--teal-tint);">💳</div><div><div class="cst-title">Plan de Pagos</div><div class="cst-subtitle">3 pagos · $150 total</div></div></div>
+            <span class="cst-arrow">›</span>
+          </div>
+          <div class="cst-body">
+            <div style="padding:12px var(--px);">
+              <div class="pay-timeline">
+                <div class="pay-item">
+                  <div class="pay-line"><div class="pay-dot paid"></div></div>
+                  <div class="pay-body"><div class="pay-date">19 de abril</div><div class="pay-desc">Depósito</div><div class="pay-amount">$50</div><div class="pay-status">✓ Completado</div></div>
+                </div>
+                <div class="pay-item">
+                  <div class="pay-line"><div class="pay-dot paid"></div></div>
+                  <div class="pay-body"><div class="pay-date">17 de mayo</div><div class="pay-desc">Segundo pago</div><div class="pay-amount">$50</div><div class="pay-status">✓ Completado</div></div>
+                </div>
+                <div class="pay-item">
+                  <div class="pay-line"><div class="pay-dot"></div></div>
+                  <div class="pay-body"><div class="pay-date">14 de junio</div><div class="pay-desc">Saldo final</div><div class="pay-amount">$40</div></div>
+                </div>
+              </div>
+              <div style="margin-top:10px;">
+                <div class="dates-timeline">
+                  <div class="date-card"><div class="date-card-left"><span class="date-card-mo">Jun</span><span class="date-card-dy">7</span></div><div class="date-card-right"><div class="date-card-title">Forma de permiso — límite</div><div class="date-card-sub">Entrégala a tu líder</div></div></div>
+                  <div class="date-card"><div class="date-card-left"><span class="date-card-mo">Jun</span><span class="date-card-dy">21</span></div><div class="date-card-right"><div class="date-card-title">Entrega de maletas y equipo</div><div class="date-card-sub">Maletas, tiendas, sillas, sleeping bag</div></div></div>
+                  <div class="date-card"><div class="date-card-left"><span class="date-card-mo">Jun</span><span class="date-card-dy">22</span></div><div class="date-card-right"><div class="date-card-title">Salida al campamento</div><div class="date-card-time">6:00 AM</div><div class="date-card-sub">Solo backpack. Llegar a la iglesia.</div></div></div>
+                  <div class="date-card"><div class="date-card-left"><span class="date-card-mo">Jun</span><span class="date-card-dy">26</span></div><div class="date-card-right"><div class="date-card-title">Regreso a la iglesia</div><div class="date-card-time">6:00 PM</div><div class="date-card-sub">Pasen a recoger a sus jóvenes</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="camp-section-toggle" id="cst-lista">
+          <div class="cst-header" data-toggle="cst-lista">
+            <div class="cst-left"><div class="cst-icon" style="background:#EEF2FF;">🎒</div><div><div class="cst-title">Lista para Llevar</div><div class="cst-subtitle">Toca para marcar lo que ya tienes</div></div></div>
+            <span class="cst-arrow">›</span>
+          </div>
+          <div class="cst-body">
+            <div style="padding:10px var(--px) 12px; display:flex; flex-direction:column; gap:8px;">
+              <div class="pack-group" style="margin:0;"><div class="pack-group-label">Lo más importante</div>
+                <div class="pack-card">
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Biblia y lapicero</span></div>
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Buena actitud y corazón abierto</span></div>
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Tienda de acampar</span></div>
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Sleeping bag</span></div>
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Silla de acampar</span></div>
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Lámpara</span></div>
+                </div>
+              </div>
+              <div class="pack-group" style="margin:0;"><div class="pack-group-label">Ropa y artículos personales</div>
+                <div class="pack-card">
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Toalla y almohada</span></div>
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Cobija y suéter / chamarra</span></div>
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Ropa para agua (no algodón)</span></div>
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Artículos personales de aseo</span></div>
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Bloqueador solar</span></div>
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Lentes oscuros</span></div>
+                </div>
+              </div>
+              <div class="pack-group" style="margin:0;"><div class="pack-group-label">Dinero y extras</div>
+                <div class="pack-card">
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Quarters para bañarse</span></div>
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Dinero para snacks y refrescos</span></div>
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">$3 para la piscina</span></div>
+                  <div class="pack-item"><div class="pack-check"></div><span class="pack-text">Juegos de mesa y pelotas</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="camp-section-toggle" id="cst-reglas">
+          <div class="cst-header" data-toggle="cst-reglas">
+            <div class="cst-left"><div class="cst-icon" style="background:#FFF0EE;">📜</div><div><div class="cst-title">Reglas del Campamento</div><div class="cst-subtitle">9 reglas · Conducta cristiana</div></div></div>
+            <span class="cst-arrow">›</span>
+          </div>
+          <div class="cst-body">
+            <div class="rules-card" style="margin:0; border-radius:0; box-shadow:none; border:none;">
+              <div class="rule-item"><div class="rule-num">1</div><span class="rule-text">Participar en todas las actividades</span></div>
+              <div class="rule-item"><div class="rule-num">2</div><span class="rule-text">Llegar a tiempo a cada sesión</span></div>
+              <div class="rule-item"><div class="rule-num">3</div><span class="rule-text">Mostrar conducta cristiana en todo momento</span></div>
+              <div class="rule-item"><div class="rule-num">4</div><span class="rule-text">No usar vulgaridades</span></div>
+              <div class="rule-item"><div class="rule-num">5</div><span class="rule-text">Permanecer en las áreas designadas</span></div>
+              <div class="rule-item"><div class="rule-num">6</div><span class="rule-text">No parejas a solas — respeto mutuo</span></div>
+              <div class="rule-item"><div class="rule-num">7</div><span class="rule-text">No electrónicos durante el campamento</span></div>
+              <div class="rule-item"><div class="rule-num">8</div><span class="rule-text">Celulares entregados al inicio del viaje</span></div>
+              <div class="rule-item"><div class="rule-num">9</div><span class="rule-text">Silencio de 10:00 PM a 6:30 AM</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="camp-section-toggle" id="cst-faq">
+          <div class="cst-header" data-toggle="cst-faq">
+            <div class="cst-left"><div class="cst-icon" style="background:var(--bg-deep);">❓</div><div><div class="cst-title">Preguntas Frecuentes</div><div class="cst-subtitle">5 preguntas comunes</div></div></div>
+            <span class="cst-arrow">›</span>
+          </div>
+          <div class="cst-body">
+            <div class="faq-list" style="padding:10px var(--px) 12px;">
+              <div class="faq-item"><div class="faq-q"><span class="faq-q-text">¿Cuánto cuesta el campamento?</span><span class="faq-chevron">›</span></div><div class="faq-a">El costo total es $150 por persona, dividido en tres pagos: $50 en abril, $50 en mayo y $40 en junio.</div></div>
+              <div class="faq-item"><div class="faq-q"><span class="faq-q-text">¿Pueden llevar su propio carro?</span><span class="faq-chevron">›</span></div><div class="faq-a">No. La transportación es en autobús. Todos los jóvenes viajan juntos.</div></div>
+              <div class="faq-item"><div class="faq-q"><span class="faq-q-text">¿Cuándo se entregan los celulares?</span><span class="faq-chevron">›</span></div><div class="faq-a">Los celulares se entregan al inicio del viaje y se regresan al regresar. Es parte de la experiencia del campamento.</div></div>
+              <div class="faq-item"><div class="faq-q"><span class="faq-q-text">¿Dónde recojo a mi joven?</span><span class="faq-chevron">›</span></div><div class="faq-a">El regreso es el viernes 26 de junio a las 6:00 PM en la iglesia. Te avisaremos si hay algún cambio.</div></div>
+              <div class="faq-item"><div class="faq-q"><span class="faq-q-text">¿Hay cupo limitado?</span><span class="faq-chevron">›</span></div><div class="faq-a">Sí. El cupo es limitado. Si aún no has hecho tu depósito, habla con tu líder lo antes posible.</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </section>
+
+    <section id="page-games"   class="page"><div class="ph-page"><div class="ph-ico">🎮</div><div class="ph-title">Juegos de Versículos</div><div class="ph-sub">Memoriza la Biblia jugando. Quiz, flashcards y opción múltiple.</div><div class="ph-pill">Próximamente</div></div></section>
+    <section id="page-profile" class="page"><div class="ph-page"><div class="ph-ico">👤</div><div class="ph-title">Mi Perfil</div><div class="ph-sub">Tu constancia, tus medallas, tu versículo favorito y tus metas espirituales.</div><div class="ph-pill">Próximamente</div></div></section>
+
+  </main>
+
+  <nav id="bottom-nav" aria-label="Navegación principal">
+    <button class="ni on" id="ni-home"     data-tab="home"     role="tab" aria-selected="true"  aria-label="Inicio"   onclick="switchTab('home')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Inicio</span><div class="ni-pip"></div>
+    </button>
+    <button class="ni" id="ni-notes"    data-tab="notes"    role="tab" aria-selected="false" aria-label="Notas"    onclick="switchTab('notes')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <span>Notas</span><div class="ni-pip"></div>
+    </button>
+    <button class="ni" id="ni-calendar" data-tab="calendar" role="tab" aria-selected="false" aria-label="Eventos"  onclick="switchTab('calendar')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Eventos</span><div class="ni-pip"></div>
+    </button>
+    <button class="ni" id="ni-bible"    data-tab="bible"    role="tab" aria-selected="false" aria-label="Biblia"   onclick="switchTab('bible')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      <span>Biblia</span><div class="ni-pip"></div>
+    </button>
+    <button class="ni" id="ni-more"     data-tab="more"     role="tab" aria-selected="false" aria-label="Más"      onclick="switchTab('more')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="12" cy="5" r="1.2" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="12" cy="19" r="1.2" fill="currentColor" stroke="none"/></svg>
+      <span>Más</span><div class="ni-pip"></div>
+    </button>
+  </nav>
+
+</div>
+
+<div id="dbg">…</div>
+
+
+<script src="src/data/events.js"></script>
+<script src="src/data/sermons.js"></script>
+<script src="src/data/camp.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>
